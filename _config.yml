@@ -2,24 +2,26 @@
 
 # NB! Set your site's url, otherwise nothing will work
 url: "https://le4ker.github.io"
-baseurl: "/personal-jekyll-theme"
+baseurl: ""
 
 # Google tracking id
-google-tracking-id: "UA-XXXXXXXX-X"
+#google-tracking-id: "UA-XXXXXXXX-X"
 
 #############
 # HTML Head #
 #############
 
 lang: "en"
-author: "John Smith"
-title: "{ John Smith }"
+author: "Léo Picard"
+title: "Filipa & Léo | 25.09.2027"
 description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
 keywords: "smith, jones, personal, jekyll, theme"
 favicon: "/img/favicon.ico"
+
 ################
 # Header layout#
 ################
+
 black-favicon: "/img/black-lab-glass.ico"
 background-img: "intro-bg.jpg"
 
@@ -27,8 +29,8 @@ background-img: "intro-bg.jpg"
 # Dynamic Text on the Header #
 ##############################
 
-quote: "Where’s your will to be weird?"
-me-img: "/img/jetpacktocat.png"
+#quote: "Nous nous réjouissons de vous recevoir pour notre mariage..."
+me-img: "/img/matterhorn_cropped.jpg"
 
 # To use github profile pic uncomment the following line and replace 'user_name'
 # with your github user name.
@@ -67,12 +69,18 @@ cusdis-app-id: "d34a3968-9be5-46d7-98f1-c4263cd1a220"
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
-    date: "September 2013 - Today"
-    description: "Saving the neighborhood!"
-  - image: "/img/timeline/baracktocat.jpg"
-    date: "September 2007 - August 2013"
-    description: "Started coding"
+  - image: "/img/casas_novas_square.jpg"
+    date: "Vendredi 24.09 à 19 heures"
+    description: "Souper à l'hotel Casas Novas avec les convives déjà présents"
+  - image: "/img/eglise_chaves_square.jpg"
+    date: "Samedi 25.09 à 11 heures"
+    description: "Cérémonie à l'église de Chaves, suivi d'une session photo dans la cour du château adjacent"
+  - image: "/img/casas_novas_square.jpg"
+    date: "Samedi 25.09 dès 14 heures"
+    description: "Vin d'honneur et repas à Casas Novas"
+  - image: "/img/casas_novas_square.jpg"
+    date: "Dimanche 26.09 de 8 à 10 heures"
+    description: "Petit déjeuner"
 
 # First image of the Timeline
 timeline-img: "/img/timeline/default.png"
@@ -103,24 +111,24 @@ author_blurb:
 # Social Buttons #
 ##################
 
-social:
-  - icon: "github"
-    url: "https://github.com/le4ker/personal-jekyll-theme"
-  - icon: "linkedin-in"
-    url: "https://www.linkedin.com"
-  - icon: "x-twitter"
-    url: "https://twitter.com/"
-  - icon: "rss"
-    url: "https://le4ker.github.io/personal-jekyll-theme/feed.xml"
+# social:
+#   - icon: "github"
+#     url: "https://github.com/le4ker/personal-jekyll-theme"
+#   - icon: "linkedin-in"
+#     url: "https://www.linkedin.com"
+#   - icon: "x-twitter"
+#     url: "https://twitter.com/"
+#   - icon: "rss"
+#     url: "https://le4ker.github.io/personal-jekyll-theme/feed.xml"
 
 # NB! Tread carefully if you want to change the variables below this point!
 
 # Sections shown in the index page
 pages_list:
-  About: "about"
-  Blog: "latest-post"
-  Timeline: "timeline"
-  Contact: "contact"
+  Programme: "about"
+  Organisation: "latest-post"
+  Tourisme: "timeline"
+  Contacts: "contact"
 
 syntax_theme: everforest
 

@@ -223,7 +223,7 @@ a {
     }
   }
   @media (min-width: 1200px) {
-    padding-top: 30rem;
+    padding-top: 10rem; // Adjusting padding <----------------------------------------
   }
 }
 
@@ -262,11 +262,11 @@ a {
 }
 
 .content-section {
-  margin-top: 5.02rem;
-  padding-top: 5.02rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
   @media (min-width: 768px) {
-    margin-top: 7.8125rem;
-    padding-top: 7.8125rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
   }
   img {
     display: block;
@@ -379,16 +379,44 @@ ul.social-buttons li a {
 }
 
 .img-me {
-  width: 8.12rem;
-  height: 8.12rem;
+  width: auto;
+  height: auto;
+  max-width: 100%;        /* safety net: shrink on small screens */
+  object-fit: cover;
   border: 0.4375rem solid var(--background-color);
-  border-radius: 100%;
+  border-radius: 0;
   background-color: var(--background-color);
-  color: #f2f2f2;
-
   display: block;
   margin: 0 auto;
-  cursor: pointer;
+  cursor: default;
+}
+
+.small-img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+    display: block;
+    margin: 0;   /* or margin: 0 auto; if you still want it centered */
+}
+
+.img-me-container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;      /* container shrinks to the image size */
+}
+
+.img-me-caption {
+  position: absolute;
+  top: 1rem;               /* distance from the top edge */
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);  /* readability over busy images */
+  pointer-events: none;     /* optional: lets clicks pass through to the image */
 }
 
 .post-list {
@@ -683,8 +711,9 @@ body {
   }
 
   header.intro .img-me {
-    width: 13.13rem;
-    height: 13.13rem;
+    width: auto;
+    height: auto;
+    max-width: 100%;
   }
 }
 
