@@ -148,7 +148,7 @@ a {
   border-bottom: 0.0625rem solid var(--font-color-faint-3);
   text-transform: uppercase;
   background-color: var(--primary-color);
-  overflow-y: auto;
+  overflow: visible;
   @media (min-width: 768px) {
     padding: 1.25rem 0;
     border-bottom: none;
@@ -824,4 +824,18 @@ body {
     border: none !important;
     min-height: 20rem;
   }
+}
+
+// Fix dropdown menu overflow in navbar
+.dropdown-menu {
+  min-width: 10rem;
+  overflow: visible;
+}
+
+.navbar-collapse {
+  overflow: visible;
+}
+
+.navbar {
+  overflow: visible;
 }
