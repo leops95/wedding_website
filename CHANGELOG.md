@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/leops95/wedding_website/compare/v1.1.0...v1.1.1) (2026-10-17)
+
+### 🐛 Bug Fixes
+
+* translate timeline events and footer text for all languages ([5b56d51](https://github.com/leops95/wedding_website/commit/5b56d51c6253f8f4ead37c6f0a6822946bdfaf44))
+
 ## [1.1.0](https://github.com/leops95/wedding_website/compare/v1.0.0...v1.1.0) (2026-10-17)
 
 ### ✨ Features
