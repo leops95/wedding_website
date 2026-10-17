@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/leops95/wedding_website/compare/v1.0.0...v1.1.0) (2026-10-17)
+
+### ✨ Features
+
+* add Portuguese language support for wedding website ([bd94ef0](https://github.com/leops95/wedding_website/commit/bd94ef028f0351e1e774658fd2ad3ff23237744f))
+
 ## 1.0.0 (2026-10-08)
 
 ### ✨ Features
