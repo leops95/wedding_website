@@ -1,7 +1,8 @@
 <!-- Index Layout Start -->
 
 <!doctype html>
-<html lang="{{site.lang}}">
+{% assign current_lang = page.lang | default: 'fr' %}
+<html lang="{{ current_lang }}">
 
   {% include head.html %}
 
@@ -14,13 +15,40 @@
     {% include navigation.html %} 
 
     {% include header.html %} 
-    {% for p in site.pages_list %} 
-      {% for page in site.pages %} 
-        {% if p[1] == page.section-type %} 
-          {% include {{ page.path }} %} 
-        {% endif %} 
+    {% for p in site.pages_list %}
+      {% assign section_type = p[1] %}
+      {% assign section_page = nil %}
+      
+      {% for sec in site.pages %}
+        {% if sec.section-type == section_type and sec.lang == current_lang %}
+          {% assign section_page = sec %}
+          {% break %}
+        {% endif %}
       {% endfor %}
-    {% endfor %} 
+      
+      {% if section_page == nil and current_lang != 'fr' %}
+        {% for sec in site.pages %}
+          {% if sec.section-type == section_type %}
+            {% if sec.lang == nil %}
+              {% assign section_page = sec %}
+              {% break %}
+            {% endif %}
+            {% if sec.lang == 'fr' %}
+              {% assign section_page = sec %}
+              {% break %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      
+      {% if section_page %}
+        <section id="{{ section_type }}" class="container content-section text-center">
+          <div class="row justify-content-center">
+            <div class="col-12">{{ section_page.content | markdownify }}</div>
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
 
     {% include footer.html %} 
 

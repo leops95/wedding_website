@@ -1,0 +1,39 @@
+---
+layout: section
+section-type: about
+lang: pt
+title: Sobre
+---
+
+<img class="small-img" src="img/test_cropped.png" alt=""/>
+
+<h2>Programa</h2>
+
+<ul class="timeline pt-5">
+        {% for event in site.events %} {% assign loopindex = forloop.index |
+        modulo: 2 %} {% capture class %} {% if loopindex == 0 %}
+        timeline-inverted {% endif %} {% endcapture %}
+
+        <li class="{{ class }}">
+          <div class="timeline-image">
+            <img
+              class="rounded-circle img-fluid"
+              src="{{ event.image | relative_url }}"
+              alt=""
+              width="156"
+              height="156"
+            />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>{{ event.date | upcase }}</h4>
+            </div>
+            <div class="timeline-body">
+              {{ event.description | markdownify }}
+            </div>
+          </div>
+        </li>
+
+        {% endfor %}
+
+      </ul>
