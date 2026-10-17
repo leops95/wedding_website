@@ -1,0 +1,8 @@
+fr:
+  text: "Ce site est hébergé sur GitHub et son agencement est adapté du modèle <a href=\"https://github.com/le4ker/personal-jekyll-theme\" target=\"_blank\">personal-jekyll-theme</a>"
+
+en:
+  text: "This site is hosted on GitHub and its layout is adapted from the <a href=\"https://github.com/le4ker/personal-jekyll-theme\" target=\"_blank\">personal-jekyll-theme</a> template"
+
+pt:
+  text: "Este site está hospedado no GitHub e o seu layout é adaptado do modelo <a href=\"https://github.com/le4ker/personal-jekyll-theme\" target=\"_blank\">personal-jekyll-theme</a>"

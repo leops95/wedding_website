@@ -68,19 +68,7 @@ cusdis-app-id: "d34a3968-9be5-46d7-98f1-c4263cd1a220"
 # Timeline #
 ############
 
-events:
-  - image: "/img/casas_novas_square.jpg"
-    date: "Vendredi 24.09 à 19 heures"
-    description: "Souper à l'hotel Casas Novas avec les convives déjà présents"
-  - image: "/img/eglise_chaves_square.jpg"
-    date: "Samedi 25.09 à 11 heures"
-    description: "Cérémonie à l'église de Chaves, suivi d'une session photo dans la cour du château adjacent"
-  - image: "/img/casas_novas_square.jpg"
-    date: "Samedi 25.09 dès 14 heures"
-    description: "Vin d'honneur et repas à Casas Novas"
-  - image: "/img/casas_novas_square.jpg"
-    date: "Dimanche 26.09 de 8 à 10 heures"
-    description: "Petit déjeuner"
+# Timeline events are now in _data/events.yml for language support
 
 # First image of the Timeline
 timeline-img: "/img/timeline/default.png"
