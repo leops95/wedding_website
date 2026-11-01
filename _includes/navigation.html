@@ -37,18 +37,24 @@
         {% else %} 
         {% for p in site.data.nav[current_lang] %}
           <li class="nav-item pe-2 ps-2">
-            {% if p[1] == "latest-post" %} 
-              {% if page.section-type == 'latest-post' %}
-                <a class="nav-link page-scroll" href="#page">{{ p[0] }}</a>
-              {% else %}
-                {% assign blog_path = '/' | append: current_lang | append: '/blog/' %}
-                {% if current_lang == 'fr' %}
-                  {% assign blog_path = '/blog/' %}
-                {% endif %}
-                <a class="nav-link pe-2 ps-2" href="{{ blog_path | relative_url }}">{{ p[0] }}</a>
-              {% endif %}
+            {% assign page_path = p[1] %}
+            {% if p[1] == "organisation" %}
+              {% assign page_path = "2_organisation" %}
+            {% elsif p[1] == "programme" %}
+              {% assign page_path = "1_programme" %}
+            {% elsif p[1] == "tourisme" %}
+              {% assign page_path = "3_tourisme" %}
+            {% elsif p[1] == "contact" %}
+              {% assign page_path = "4_contact" %}
+            {% endif %}
+            {% if page.section-type == p[1] %}
+              <a class="nav-link page-scroll" href="#page">{{ p[0] }}</a>
             {% else %}
-              <a class="nav-link pe-2 ps-2" href="{{ base_path | relative_url }}#{{ p[1] }}">{{ p[0] }}</a>
+              {% assign full_path = page_path %}
+              {% if current_lang != 'fr' %}
+                {% assign full_path = current_lang | append: '/' | append: page_path %}
+              {% endif %}
+              <a class="nav-link pe-2 ps-2" href="{{ full_path | relative_url }}">{{ p[0] }}</a>
             {% endif %}
           </li>
           {% endfor %} 

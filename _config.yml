@@ -113,9 +113,9 @@ author_blurb:
 
 # Sections shown in the index page
 pages_list:
-  Programme: "about"
-  Organisation: "latest-post"
-  Tourisme: "timeline"
+  Programme: "programme"
+  Organisation: "organisation"
+  Tourisme: "tourisme"
   Contacts: "contact"
 
 syntax_theme: everforest
