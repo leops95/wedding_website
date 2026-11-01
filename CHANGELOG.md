@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/leops95/wedding_website/compare/v1.1.1...v1.1.2) (2026-10-17)
+
+### 🐛 Bug Fixes
+
+* replace test_cropped.png with branch1_test.png and fix dropdown overflow ([03d29c6](https://github.com/leops95/wedding_website/commit/03d29c69979487f6f8b7b224e3e25089aec13fd3))
+
 ## [1.1.1](https://github.com/leops95/wedding_website/compare/v1.1.0...v1.1.1) (2026-10-17)
 
 ### 🐛 Bug Fixes
