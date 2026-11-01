@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/leops95/wedding_website/compare/v1.1.2...v1.2.0) (2026-11-01)
+
+### ✨ Features
+
+* add blog content to English and Portuguese pages ([5a7e971](https://github.com/leops95/wedding_website/commit/5a7e9718e9517ec741c5424841f170e61b621e6b))
+
 ## [1.1.2](https://github.com/leops95/wedding_website/compare/v1.1.1...v1.1.2) (2026-10-17)
 
 ### 🐛 Bug Fixes
