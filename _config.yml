@@ -1,8 +1,8 @@
 # Site settings
 
 # NB! Set your site's url, otherwise nothing will work
-url: "https://leops95.github.io"
-baseurl: ""
+url: "https://leops95.github.io/wedding-test"
+baseurl: "/wedding-test"
 
 # Google tracking id
 #google-tracking-id: "UA-XXXXXXXX-X"
