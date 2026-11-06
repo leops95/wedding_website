@@ -194,13 +194,36 @@ a {
   width: 100%;
   height: auto;
   text-align: center;
-  padding-top: 20rem;
+  padding-top: 3rem;
   color: var(--font-color);
   background-color: var(--primary-color);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  
+  /* Override Bootstrap container to allow full width */
+  .container {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+  
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
+  .container > .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  
   .intro-body {
     display: table-cell;
     vertical-align: middle;
@@ -213,6 +236,7 @@ a {
   }
   @media (min-width: 768px) {
     height: 100%;
+    padding-top: calc(5rem + 19px);
     .intro-body {
       .brand-heading {
         font-size: 6.25rem;
@@ -221,9 +245,6 @@ a {
         font-size: 1.6rem;
       }
     }
-  }
-  @media (min-width: 1200px) {
-    padding-top: 10rem; // Adjusting padding <----------------------------------------
   }
 }
 
@@ -379,13 +400,13 @@ ul.social-buttons li a {
 }
 
 .img-me {
-  width: auto;
+  width: 100vw;
   height: auto;
-  max-width: 100%;        /* safety net: shrink on small screens */
+  max-width: none;
   object-fit: cover;
-  border: 0.4375rem solid var(--background-color);
+  border: none;
   border-radius: 0;
-  background-color: var(--background-color);
+  background-color: transparent;
   display: block;
   margin: 0 auto;
   cursor: default;
@@ -404,12 +425,16 @@ ul.social-buttons li a {
   position: relative;
   display: block;
   margin: 0 auto;
-  width: fit-content;      /* container shrinks to the image size */
+  width: 100vw;
+  max-width: none;
 }
 
 .img-me-caption {
   display: block;
   width: 100%;
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   color: var(--font-color);
   font-size: 1.5rem;
@@ -709,9 +734,9 @@ body {
   }
 
   header.intro .img-me {
-    width: auto;
+    width: 100vw;
     height: auto;
-    max-width: 100%;
+    max-width: none;
   }
 }
 

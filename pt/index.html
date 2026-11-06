@@ -8,6 +8,9 @@ has-comments: true
 ---
 
 <div class="img-me-container">
-  <img class="img-me" src="{{ site.me-img | relative_url }}" alt=""/>
+  <picture>
+    <source media="(max-width: 991px)" srcset="{{ '/img/matterhorn_cropped_portrait.jpg' | relative_url }}">
+    <img class="img-me" src="{{ site.me-img | relative_url }}" alt="">
+  </picture>
 </div>
 <div class="img-me-caption">Bem-vindos ao nosso site de casamento! <br/> Já estamos ansiosos para partilhar este momento convosco...</div>
