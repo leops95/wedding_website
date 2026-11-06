@@ -39,13 +39,17 @@
           <li class="nav-item pe-2 ps-2">
             {% assign page_path = p[1] %}
             {% if p[1] == "organisation" %}
-              {% assign page_path = "2_organisation" %}
+              {% assign page_path = "2_organisation.html" %}
             {% elsif p[1] == "programme" %}
-              {% assign page_path = "1_programme" %}
-            {% elsif p[1] == "tourisme" %}
-              {% assign page_path = "3_tourisme" %}
+              {% assign page_path = "1_programme.html" %}
+            {% elsif p[1] == "cadeaux" %}
+              {% assign page_path = "3_cadeaux.html" %}
+            {% elsif p[1] == "gifts" %}
+              {% assign page_path = "3_gifts.html" %}
+            {% elsif p[1] == "presentes" %}
+              {% assign page_path = "3_presentes.html" %}
             {% elsif p[1] == "contact" %}
-              {% assign page_path = "4_contact" %}
+              {% assign page_path = "4_contact.html" %}
             {% endif %}
             {% if page.section-type == p[1] %}
               <a class="nav-link page-scroll" href="#page">{{ p[0] }}</a>
@@ -66,13 +70,31 @@
           <i class="fa fa-globe"></i> {{ page.lang | default: 'fr' | upcase }}
         </button>
         <ul class="dropdown-menu dropdown-menu-end">
-          {% assign current_path = page.url | remove: '/en/' | remove: '/pt/' | remove: '/index.html' | remove_first: '/' | strip %}
-          {% if current_path == '' or current_path == '/' %}
-            {% assign current_path = '' %}
+          {% if page.section-type == 'index' %}
+            <li><a class="dropdown-item" href="{{ '/' | relative_url }}">Français</a></li>
+            <li><a class="dropdown-item" href="{{ '/en/' | relative_url }}">English</a></li>
+            <li><a class="dropdown-item" href="{{ '/pt/' | relative_url }}">Português</a></li>
+          {% elsif page.section-type == 'programme' %}
+            <li><a class="dropdown-item" href="{{ '/1_programme.html' | relative_url }}">Français</a></li>
+            <li><a class="dropdown-item" href="{{ '/en/1_programme.html' | relative_url }}">English</a></li>
+            <li><a class="dropdown-item" href="{{ '/pt/1_programme.html' | relative_url }}">Português</a></li>
+          {% elsif page.section-type == 'organisation' %}
+            <li><a class="dropdown-item" href="{{ '/2_organisation.html' | relative_url }}">Français</a></li>
+            <li><a class="dropdown-item" href="{{ '/en/2_organisation.html' | relative_url }}">English</a></li>
+            <li><a class="dropdown-item" href="{{ '/pt/2_organisation.html' | relative_url }}">Português</a></li>
+          {% elsif page.section-type == 'cadeaux' or page.section-type == 'gifts' or page.section-type == 'presentes' %}
+            <li><a class="dropdown-item" href="{{ '/3_cadeaux.html' | relative_url }}">Français</a></li>
+            <li><a class="dropdown-item" href="{{ '/en/3_gifts.html' | relative_url }}">English</a></li>
+            <li><a class="dropdown-item" href="{{ '/pt/3_presentes.html' | relative_url }}">Português</a></li>
+          {% elsif page.section-type == 'contact' %}
+            <li><a class="dropdown-item" href="{{ '/4_contact.html' | relative_url }}">Français</a></li>
+            <li><a class="dropdown-item" href="{{ '/en/4_contact.html' | relative_url }}">English</a></li>
+            <li><a class="dropdown-item" href="{{ '/pt/4_contact.html' | relative_url }}">Português</a></li>
+          {% else %}
+            <li><a class="dropdown-item" href="{{ '/' | relative_url }}">Français</a></li>
+            <li><a class="dropdown-item" href="{{ '/en/' | relative_url }}">English</a></li>
+            <li><a class="dropdown-item" href="{{ '/pt/' | relative_url }}">Português</a></li>
           {% endif %}
-          <li><a class="dropdown-item" href="/{{ current_path }}">Français</a></li>
-          <li><a class="dropdown-item" href="/en/{{ current_path }}">English</a></li>
-          <li><a class="dropdown-item" href="/pt/{{ current_path }}">Português</a></li>
         </ul>
       </div>
       <!--

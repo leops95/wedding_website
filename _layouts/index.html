@@ -15,7 +15,11 @@
     {% include navigation.html %} 
 
     {% include header.html %} 
-    {% for p in site.pages_list %}
+    {% assign pages_list = site.data.pages_list[current_lang] %}
+    {% if pages_list == nil %}
+      {% assign pages_list = site.data.pages_list['fr'] %}
+    {% endif %}
+    {% for p in pages_list %}
       {% assign section_type = p[1] %}
       {% assign section_page = nil %}
       

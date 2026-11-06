@@ -408,15 +408,13 @@ ul.social-buttons li a {
 }
 
 .img-me-caption {
-  position: absolute;
-  top: 1rem;               /* distance from the top edge */
-  left: 0;
-  right: 0;
+  display: block;
+  width: 100%;
   text-align: center;
-  color: #fff;
+  color: var(--font-color);
   font-size: 1.5rem;
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.8);  /* readability over busy images */
-  pointer-events: none;     /* optional: lets clicks pass through to the image */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .post-list {
