@@ -29,6 +29,29 @@ h6 {
 }
 
 @media (max-width: 767px) {
+  body {
+    font-size: 1rem;
+  }
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  .navbar-nav .nav-link,
+  .navbar .dropdown-toggle,
+  .dropdown-menu .dropdown-item {
+    font-size: 1.2rem;
+  }
+  h2, h3 {
+    font-size: 1.8rem;
+  }
+  #programme h4 {
+    font-size: 1.3rem;
+  }
+  #programme .timeline-body {
+    font-size: 1rem;
+  }
+  .img-me-caption {
+    font-size: 1.2rem;
+  }
   #post h1,
   #post h2,
   #post h3,
@@ -400,7 +423,7 @@ ul.social-buttons li a {
 }
 
 .img-me {
-  width: 100vw;
+  width: 100%;
   height: auto;
   max-width: none;
   object-fit: cover;
@@ -425,7 +448,7 @@ ul.social-buttons li a {
   position: relative;
   display: block;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   max-width: none;
 }
 
@@ -438,7 +461,7 @@ ul.social-buttons li a {
   text-align: center;
   color: var(--font-color);
   font-size: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 3cm;
   margin-bottom: 1rem;
 }
 
@@ -849,14 +872,34 @@ body {
   }
 }
 
-// Fix dropdown menu overflow in navbar
+// Fix dropdown menu - apply to all versions
 .dropdown-menu {
-  min-width: 10rem;
-  overflow: visible;
+  position: absolute !important;
+  z-index: 9999 !important;
+  top: calc(100% + 0.5cm) !important;
+}
+
+// Fix navbar-collapse overflow and dropdown alignment - mobile only
+@media (max-width: 767px) {
+  .navbar-collapse:not(.show),
+  .navbar-collapse.collapsing {
+    overflow: hidden;
+  }
+  .dropdown-menu {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+// Fix navbar-collapse overflow - non-mobile
+@media (min-width: 768px) {
+  .navbar-collapse {
+    overflow: visible;
+  }
 }
 
 .navbar-collapse {
-  overflow: visible;
+  background-color: var(--primary-color);
 }
 
 .navbar {
