@@ -104,13 +104,14 @@ small {
 }
 
 p {
-  padding: 0.5rem 0rem;
+  padding: 0.35rem 0rem;
+  margin-bottom: 0.75rem;
   line-height: 1.5;
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
   @media (min-width: 768px) {
-    padding: 0.3rem 0rem;
+    padding: 0.2rem 0rem;
     line-height: 1.6;
   }
 }
@@ -380,8 +381,8 @@ a {
 
   // Center paragraphs when section has text-center class
   &.text-center p {
-    margin: 1.5rem auto;
-    padding: 1rem 1.25rem;
+    margin: 0.75rem auto;
+    padding: 0.4rem 1.25rem;
     text-align: center;
   }
 }
@@ -458,7 +459,7 @@ ul.social-buttons li a {
 
 .img-me-caption {
   display: block;
-  width: 100%;
+  width: calc(100% - 2rem); // marge latérale minimale de 1rem de chaque côté
   max-width: 80ch;
   margin-left: auto;
   margin-right: auto;
@@ -525,15 +526,15 @@ ul.social-buttons li a {
 }
 
 footer {
-  padding: 3.11rem 0;
+  padding: 3.11rem 0 1.5rem; // marge du bas réduite
   text-align: center;
   .container {
-    margin: 1.5rem auto;
+    margin: 1.5rem auto 0.75rem;
     padding: 1rem 1.25rem;
   }
   p {
-    margin: 1.5rem auto;
-    padding: 1rem 1.25rem;
+    margin: 0.75rem auto;
+    padding: 0.4rem 1.25rem;
     text-align: center;
   }
 }
@@ -967,7 +968,7 @@ html .img-me-caption {
 
   html .timeline > li .timeline-panel,
   html .timeline > li.timeline-inverted > .timeline-panel {
-    padding-left: 8.25rem; // 7rem de photo + 1.25rem d'espace avant le texte
+    padding: 0 0.5rem 0 7.5rem; // 7rem de photo + 0.5rem d'espace, pour élargir le texte
   }
 }
 
