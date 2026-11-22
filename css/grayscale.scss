@@ -14,8 +14,12 @@ body {
   line-height: 1.6;
   text-align: justify;
   scroll-behavior: smooth;
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: none;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 h1,
@@ -904,4 +908,136 @@ body {
 
 .navbar {
   overflow: visible;
+}
+
+// --- Correctifs version française (html) ---
+
+// Pas de barre de scroll horizontale : on bloque le débordement en largeur
+// sans jamais couper les mots (hyphens reste à none plus haut).
+html {
+  overflow-x: hidden; // fallback navigateurs anciens
+  overflow-x: clip; // moderne : ne crée pas de conteneur de scroll
+}
+
+// Version téléphone : titres réduits, mais pas trop (mobile uniquement)
+@media (max-width: 767px) {
+  html h1 {
+    font-size: 2.5rem;
+  }
+  html h2 {
+    font-size: 1.7rem;
+  }
+  html h3 {
+    font-size: 1.45rem;
+  }
+  html h4,
+  html #programme h4 {
+    font-size: 1.3rem;
+  }
+  html h5 {
+    font-size: 1.15rem;
+  }
+  html h6 {
+    font-size: 1.05rem;
+  }
+}
+
+// Le texte de bienvenue sous la photo d'accueil suit la taille normale du
+// texte (hérite du body : 1.2rem en desktop, 1rem en mobile)
+html .img-me-caption {
+  font-size: inherit;
+}
+
+// Programme en version téléphone : petite marge pour ne pas coller les
+// photos au bord de l'écran, et images légèrement plus grandes
+@media (max-width: 767px) {
+  html ul.timeline {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  html .timeline:before {
+    left: 3.28125rem; // centrée derrière la photo de 7rem
+  }
+
+  html .timeline > li .timeline-image {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  html .timeline > li .timeline-panel,
+  html .timeline > li.timeline-inverted > .timeline-panel {
+    padding-left: 8.25rem; // 7rem de photo + 1.25rem d'espace avant le texte
+  }
+}
+
+// Image hero : 100% et non 100vw (100vw déborde à cause de la barre de scroll verticale)
+@media (min-width: 768px) {
+  html header.intro .img-me {
+    width: 100%;
+  }
+}
+
+// Programme : la timeline suit la même règle de marge gauche que le texte
+// du site (bloc centré de 80ch), les photos restent à gauche, collées au
+// bord gauche de la zone de texte, suivies du texte à droite (plus de
+// zigzag centré en desktop). Les photos gardent leur taille d'origine.
+html .timeline {
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  html .timeline:before {
+    left: 2.90625rem; // centrée derrière la photo de 6.25rem
+    transform: none;
+  }
+
+  html .timeline > li .timeline-panel,
+  html .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    width: 100%;
+    padding: 0 1.25rem 0 7.5rem;
+    text-align: left;
+  }
+
+  html .timeline > li .timeline-image {
+    left: 0;
+    transform: none;
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html .timeline:before {
+    left: 4.46875rem; // centrée derrière la photo de 9.375rem
+  }
+
+  html .timeline > li .timeline-panel,
+  html .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 1.25rem 0 10.625rem;
+  }
+
+  html .timeline > li .timeline-image {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html .timeline:before {
+    left: 4.65625rem; // centrée derrière la photo de 9.75rem
+  }
+
+  html .timeline > li .timeline-panel,
+  html .timeline > li.timeline-inverted > .timeline-panel {
+    padding: 0 1.25rem 0 11rem;
+  }
+
+  html .timeline > li .timeline-image {
+    width: 9.75rem;
+    height: 9.75rem;
+  }
 }

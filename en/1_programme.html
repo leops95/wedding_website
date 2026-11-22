@@ -7,7 +7,7 @@ title: Program
 
 <img class="small-img" src="{{ '/img/branch3_test.png' | relative_url }}" alt=""/>
 
-<h2>Program</h2>
+<h2>Program of the day</h2>
 
 <ul class="timeline pt-5">
         {% assign current_lang = page.lang | default: 'fr' %}
@@ -27,7 +27,14 @@ title: Program
           </div>
           <div class="timeline-panel">
             <div class="timeline-heading">
+              {% if event.date %}
               <h4>{{ event.date | upcase }}</h4>
+              {% if event.time %}
+              <h4 class="subheading">{{ event.time | upcase }}</h4>
+              {% endif %}
+              {% elsif event.time %}
+              <h4>{{ event.time | upcase }}</h4>
+              {% endif %}
             </div>
             <div class="timeline-body">
               {{ event.description | markdownify }}

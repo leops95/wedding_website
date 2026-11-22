@@ -14,9 +14,9 @@ baseurl: "/wedding_website"
 lang: "en"
 author: "Léo Picard"
 title: "Filipa & Léo | 25.09.2027"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
-favicon: "/img/favicon.ico"
+description: "Site de mariage / Wedding website / Site de casamento"
+keywords: ""
+favicon: ""
 
 ################
 # Header layout#
@@ -62,7 +62,7 @@ pocket-share: True
 vkontakte-share: True
 
 # NB! Create an account in Cusdis and update the app id, otherwise the comments won't work
-cusdis-app-id: "d34a3968-9be5-46d7-98f1-c4263cd1a220"
+cusdis-app-id: "" #"d34a3968-9be5-46d7-98f1-c4263cd1a220"
 
 ############
 # Timeline #
@@ -77,7 +77,7 @@ timeline-img: "/img/timeline/default.png"
 # Contact #
 ###########
 
-email: "your@email.here"
+email: "" #"your@email.here"
 
 ################
 # Author Blurb #
@@ -86,14 +86,8 @@ email: "your@email.here"
 # The author blurb goes underneath blog posts.
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
-author_blurb_image: "/img/author.png"
-author_blurb:
-  "'Github''s Octocat was designed by Simon Oxley, alongside the white bird Twitter
-  used (before they received a proper logo) as part of a usual routine of cranking
-  out images for iStock. GitHub saw it, and wanted it, presumably under the notion
-  that it can represent how complex code combines to create peculiar things, much
-  like the octopuss... except the CEO of GitHub called it an octocat, and it has
-  been the octocat since then."
+author_blurb_image: "" #"/img/author.png"
+author_blurb: ""
 
 ##################
 # Social Buttons #
