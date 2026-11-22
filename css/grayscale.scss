@@ -37,7 +37,8 @@ h6 {
     font-size: 1rem;
   }
   .navbar-brand {
-    font-size: 1.3rem;
+    font-size: 1rem; // titre réduit pour laisser le bouton menu à droite sur petits écrans
+    white-space: nowrap;
   }
   .navbar-nav .nav-link,
   .navbar .dropdown-toggle,
