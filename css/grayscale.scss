@@ -37,7 +37,7 @@ h6 {
     font-size: 1rem;
   }
   .navbar-brand {
-    font-size: 1rem; // titre réduit pour laisser le bouton menu à droite sur petits écrans
+    font-size: 0.85rem; // titre réduit pour laisser le bouton menu à droite sur petits écrans
     white-space: nowrap;
   }
   .navbar-nav .nav-link,
@@ -969,7 +969,7 @@ html .img-me-caption {
 
   html .timeline > li .timeline-panel,
   html .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 0.5rem 0 7.5rem; // 7rem de photo + 0.5rem d'espace, pour élargir le texte
+    padding: 0 0.25rem 0 7.25rem; // 7rem de photo + 0.25rem d'espace, pour élargir le texte
   }
 }
 
